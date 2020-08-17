@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(237,237,237,1) 65%, rgba(246,246,246,1) 87%, rgba(246,246,246,1) 100%);
+}
+
+.wrap{
+    width: 100%;
+    margin: 0px auto;
+    display : flex;
+    justify-content: space-around;
+}
+
+#info{
+    width:100%;
+    height: 100vh;
+}
+
+#cards{
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border: 1px solid black;
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.card{
+    float: left;
+    width: 20%;
+    height: 305px;
+    border:1px solid #ccc;
+    box-shadow: 1px 1px 2px #ccc;
+    overflow: hidden;
+    transition: all 300ms;
+    text-align: center;box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+.card:hover{
+    background-color: black;
+}
+
+
+.card .icon{
+    display: block;
+    width: 100%;
+    height: 130px;
+    line-height: 130px;
+    font-size: 50px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+
+
+.card:hover .icon{
+    font-size: 70px;
+    color: #37bcf9;
+    animation: showIcon;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+
+
+@keyframes showIcon{
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+.card .category{
+    display: block;
+    font-family: TrebuchetMS;
+    text-align: center;
+    font-weight: bold;
+    font-size: 21px;
+    color:#00538c;
+    transition: all 300ms;
+}
+
+.card:hover .category{
+    color: white;
+    animation-name: sourceCategory;
+    animation-duration: 400ms;
+    animation-timing-function: linear;
+}
+
+@keyframes sourceCategory{
+    from{
+        transform: translateY(-300%);
+        color: black;
+    }
+    to{
+        transform: translateY(0%);
+        color:white
+
+    }
+}
+
+
+.card .descripcion{
+    font-family: TrebuchetMS;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    transition: all 300ms;
+}
+
+.card:hover .descripcion{
+    color: white;
+    animation-name: sourceDescription;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+
+@keyframes sourceDescription{
+    from{
+        transform: translateX(-300%);
+        color: black;
+    }
+    to{
+        transform: translateX(0%);
+        color: white;
+    }
+}
+
+.card a{
+    background-color: black;
+    padding:10px;
+    width: 70%;
+    text-decoration: none;
+    color:white;
+}
+.card:hover a{
+    
+    color:black;
+    background-color: white;
+}
